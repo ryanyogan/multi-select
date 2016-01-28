@@ -22,7 +22,7 @@ export default class AgentList extends Component {
   }
 };
 
-TodoList.propTypes = {
+AgentList.propTypes = {
   onTodoClick: PropTypes.func.isRequired,
   todos: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
