@@ -7,20 +7,26 @@ var path = require('path');
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     './src/index.js'
   ],
   module: {
+    preLoaders: [{
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: 'source-map'
+    }],
     loaders: [{
       test: /\.js$/,
-      include: [
-        path.resolve(__dirname, 'src')
+      exclude: [
+        path.resolve(__dirname, 'node_modules')
       ],
       loader: 'babel',
       query: {
         plugins: ['transform-runtime'],
-        presets: ['stage-0', 'es2015', 'react']
+        presets: ['es2015', 'stage-0', 'react']
       }
     }]
   },
@@ -32,11 +38,17 @@ module.exports = {
     puglicPath: '/',
     filename: 'bundle.js'
   },
+  devtool: 'cheap-module-source-map',
   devServer: {
     contentBase: './dist',
     hot: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ]
 };

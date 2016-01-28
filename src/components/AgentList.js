@@ -11,7 +11,6 @@ export default class AgentList extends Component {
     return (
       <ul className='agent-list'>
         {this.props.agents.map((agent) => {
-          console.log(agent);
           return (
             <Agent
               key={agent.id}
