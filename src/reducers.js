@@ -56,3 +56,10 @@ function agents(state = [], action) {
       return state;
   }
 }
+
+const agentApp = combineReducers({
+  visibilityFilter,
+  agents
+});
+
+export default agentApp;

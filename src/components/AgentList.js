@@ -23,9 +23,9 @@ export default class AgentList extends Component {
 };
 
 AgentList.propTypes = {
-  onTodoClick: PropTypes.func.isRequired,
-  todos: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired
+  onAgentClick: PropTypes.func.isRequired,
+  agents: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    selected: PropTypes.bool.isRequired
   }).isRequired).isRequired
 };

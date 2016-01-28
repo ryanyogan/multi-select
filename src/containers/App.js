@@ -8,9 +8,10 @@ import { connect } from 'react-redux';
 import {
   addAgent,
   selectAgent,
-  setVisibiltyFilter,
-  VisibilityFilter
+  setVisibilityFilter,
+  VisibilityFilters
 } from '../actions';
+
 import AddAgent from '../components/AddAgent';
 import AgentList from '../components/AgentList';
 import Footer from '../components/Footer';
@@ -32,7 +33,7 @@ class App extends Component {
 
         <Footer
           filter={visibilityFilter}
-          onFilterChange={(nextFilter) => dispatch(setVisibiltyFilter(nextFilter))}
+          onFilterChange={(nextFilter) => dispatch(setVisibilityFilter(nextFilter))}
         />
       </div>
     );
@@ -55,11 +56,11 @@ App.propTypes = {
 
 function selectAgents(agents, filter) {
   switch (filter) {
-    case VisibilityFilter.SHOW_ALL:
+    case VisibilityFilters.SHOW_ALL:
       return agents;
-    case VisibilityFilter.SHOW_SELECTED:
+    case VisibilityFilters.SHOW_SELECTED:
       return agents.filter(agent => agent.selected);
-    case VisibilityFilter.SHOW_UNSELECTED:
+    case VisibilityFilters.SHOW_UNSELECTED:
       return agents.filter(agent => !agent.selected);
   }
 };

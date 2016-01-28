@@ -37,5 +37,6 @@ export function selectAgent(id) {
 }
 
 export function setVisibilityFilter(filter) {
+  console.log(filter);
   return { type: SET_VISIBILITY_FILTER, filter }
 }

@@ -9,7 +9,7 @@ export default class Agent extends Component {
   render() {
     return (
       <li
-        onCLick={this.props.onClick}
+        onClick={this.props.onClick}
         style={{
           textDecoration: this.props.selected ? 'line-through' : 'none',
           cursor: this.props.selected ? 'default' : 'pointer'
