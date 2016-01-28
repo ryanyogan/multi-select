@@ -1,0 +1,26 @@
+{
+  "name": "multi-select",
+  "version": "0.0.1",
+  "description": "A small react example of a multi select",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanyogan/multi-select.git"
+  },
+  "keywords": [
+    "multi-select",
+    "react",
+    "redux",
+    "immutable",
+    "functional"
+  ],
+  "author": "Ryan Yogan <ryanyogan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanyogan/multi-select/issues"
+  },
+  "homepage": "https://github.com/ryanyogan/multi-select#readme"
+}
