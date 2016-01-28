@@ -3,6 +3,7 @@
 // To keep things faster we will not use es2015 / babel transpilation
 // inside the webpack config file, but you can
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
@@ -13,10 +14,13 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      exclude: /node_modules/,
+      include: [
+        path.resolve(__dirname, 'src')
+      ],
       loader: 'babel',
       query: {
-        presets: ['react', 'es2015', 'stage-2']
+        plugins: ['transform-runtime'],
+        presets: ['stage-0', 'es2015', 'react']
       }
     }]
   },

@@ -16,6 +16,7 @@ import AddAgent from '../components/AddAgent';
 import AgentList from '../components/AgentList';
 import Footer from '../components/Footer';
 
+@connect(select)
 class App extends Component {
   render() {
     const { dispatch, visibleAgents, visibilityFilter } = this.props;
@@ -72,4 +73,4 @@ function select(state) {
   }
 };
 
-export default connect(select)(App);
+export default App;

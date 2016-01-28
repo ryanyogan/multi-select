@@ -10,13 +10,16 @@ export default class AgentList extends Component {
   render() {
     return (
       <ul className='agent-list'>
-        {this.props.agents.map(agent =>
-          <Agent
-            key={agent.id}
-            {...agent}
-            onClick={() => this.props.onAgentClick(agent.id)}
-          />
-        )}
+        {this.props.agents.map((agent) => {
+          console.log(agent);
+          return (
+            <Agent
+              key={agent.id}
+              {...agent}
+              onClick={() => this.props.onAgentClick(agent.id)}
+            />
+          );
+        })}
       </ul>
     );
   }

@@ -16,7 +16,7 @@ export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_SELECTED: 'SHOW_SELECTED',
   SHOW_UNSELECTED: 'SHOW_UNSELECTED'
-}
+};
 
 /**
  * Action Creators
@@ -37,6 +37,5 @@ export function selectAgent(id) {
 }
 
 export function setVisibilityFilter(filter) {
-  console.log(filter);
   return { type: SET_VISIBILITY_FILTER, filter }
 }
