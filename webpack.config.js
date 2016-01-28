@@ -1,5 +1,13 @@
+'use strict';
+
+// To keep things faster we will not use es2015 / babel transpilation
+// inside the webpack config file, but you can
+var webpack = require('webpack');
+
 module.exports = {
   entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
     './src/index.js'
   ],
   module: {
@@ -18,6 +26,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist'
-  }
+    contentBase: './dist',
+    hot: true
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
