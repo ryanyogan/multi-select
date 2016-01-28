@@ -13,7 +13,12 @@ export default class AgentSelect extends Component {
   render() {
     const agents = this.getAgents().map((agent) => {
       return (
-        <li className='agent-row' key={agent}>{agent}</li>
+        <li
+          className='agent-row'
+          key={agent}
+          onClick={() => this.props.selectAgent(agent)}>
+          {agent}
+        </li>
       );
     });
 
