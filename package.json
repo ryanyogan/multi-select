@@ -27,14 +27,17 @@
   "babel": {
     "presets": [
       "es2015",
+      "stage-2",
       "react"
     ]
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.3",
     "jsdom": "^8.0.0",
@@ -47,6 +50,8 @@
     "immutable": "^3.7.6",
     "react": "^0.14.6",
     "react-addons-test-utils": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.6"
   }
 }
