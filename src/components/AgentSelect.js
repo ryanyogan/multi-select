@@ -1,7 +1,8 @@
 'use strict';
 
 import React, {
-  Component
+  Component,
+  PropTypes
 } from 'react';
 
 export default class AgentSelect extends Component {
@@ -26,4 +27,8 @@ export default class AgentSelect extends Component {
       </div>
     );
   }
-}
+};
+
+AgentSelect.propTypes = {
+  agents: PropTypes.array.isRequired
+};

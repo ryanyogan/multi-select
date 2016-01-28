@@ -16,6 +16,8 @@ const agents = [
   'That Guy'
 ];
 
+// You may run this anywhere, in any client js and render
+// out the component(s) you would like
 ReactDOM.render(
   <AgentSelect agents={agents} />,
   document.getElementById('app')
