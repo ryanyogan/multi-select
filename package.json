@@ -4,7 +4,8 @@
   "description": "A small react example of a multi select",
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -35,9 +36,13 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "chai": "^3.4.1",
+    "chai-immutable": "^1.5.3",
     "jsdom": "^8.0.0",
     "mocha": "^2.4.4",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "immutable": "^3.7.6"
   }
 }
