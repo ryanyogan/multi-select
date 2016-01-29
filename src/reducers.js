@@ -33,7 +33,7 @@ function agent(state, action) {
       }
 
       return {
-        ...state,
+        ...state,  // ES7 spead === Object.assign(state, {selected: true})
         selected: true
       };
     default:
@@ -49,8 +49,8 @@ function agents(state = [], action) {
         agent(undefined, action)
       ];
     case SELECT_AGENT:
-      return state.map((selectedAgent) => {
-        agent(selectedAgent, action);
+      return state.map((s) => {
+        agent(s, action);
       });
     default:
       return state;

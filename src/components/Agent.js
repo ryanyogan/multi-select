@@ -18,7 +18,7 @@ export default class Agent extends Component {
       </li>
     );
   }
-}
+};
 
 Agent.propTypes = {
   onClick: PropTypes.func.isRequired,

@@ -13,7 +13,6 @@ export default class AgentList extends Component {
         {this.props.agents.map((agent) => {
           return (
             <Agent
-              key={agent.id}
               {...agent}
               onClick={() => this.props.onAgentClick(agent.id)}
             />
